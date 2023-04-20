@@ -39,13 +39,13 @@ import imp
 import threading
 import sys
 import multiprocessing
-import StringIO
+from io import StringIO
 import errno
 import signal
 import socket
 import struct
 import time
-from Queue import Queue
+import queue as queue
 
 from serial import Serial, SerialException, SerialTimeoutException
 
