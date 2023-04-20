@@ -45,7 +45,7 @@ import signal
 import socket
 import struct
 import time
-import queue as queue
+import queue
 
 from serial import Serial, SerialException, SerialTimeoutException
 
@@ -327,7 +327,7 @@ class SerialClient(object):
         self.read_lock = threading.RLock()
 
         self.write_lock = threading.RLock()
-        self.write_queue = Queue()
+        self.write_queue = queue.Queue()
         self.write_alive = False
         self.write_thread = None
 
